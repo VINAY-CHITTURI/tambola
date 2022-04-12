@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambola</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript">
+        var myHash = new Array();
+        function genNextRand () {
+            return (Math.floor(Math.random()*90)+1);
+        }
+
+        function genRandNo()
+        {
+            var num = genNextRand();
+            var i = 0
+            while (myHash[num] == 1)
+            {
+                i++;
+                num = genNextRand();
+                if (i >=90)
+                {
+                    alert("All numbers are done. Please refresh page to strat new game.");
+                    return;
+                }
+            }
+            myHash[num]=1;
+            document.getElementById('nextNumber').innerHTML=num;
+            document.getElementById('completedNumbers').innerHTML+=("  "+num);
+            document.getElementById('number').element.style.backgroundColor=green;
+        }
+        
+    </script>    
+</head>
+    <body>
+        
+        <table class="table table-bordered" style="max-width: 800px; align-items: center;">
+            <tbody>
+                {% for recent in recent_numbers %}
+                {% endfor %}
+                <tr>
+                    {% if 1 in random %}
+                    <td id="number" style="border: 1px solid black; background-color: green;">1</td>
+                    {% else %}
+                    <td id="number" style="border: 1px solid black;">1</td>
+                    {% endif %}
+                    {% if 2 in random %}
+                    <td style="border: 1px solid black; background-color: green;">2</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">2</td>
+                    {% endif %}
+                    {% if 3 == random %}
+                    <td style="border: 1px solid black; background-color: green;">3</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">3</td>
+                    {% endif %}
+                    {% if 4 == random %}
+                    <td style="border: 1px solid black; background-color: green;">4</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">4</td>
+                    {% endif %}
+                    {% if 5 == random %}
+                    <td style="border: 1px solid black; background-color: green;">5</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">5</td>
+                    {% endif %}
+                    {% if 6 == random %}
+                    <td style="border: 1px solid black; background-color: green;">6</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">6</td>
+                    {% endif %}
+                    {% if 7 == random %}
+                    <td style="border: 1px solid black; background-color: green;">7</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">7</td>
+                    {% endif %}
+                    {% if 8 == random %}
+                    <td style="border: 1px solid black; background-color: green;">8</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">8</td>
+                    {% endif %}
+                    {% if 9 == random %}
+                    <td style="border: 1px solid black; background-color: green;">9</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">9</td>
+                    {% endif %}
+                    {% if 10 == random %}
+                    <td style="border: 1px solid black; background-color: green;">10</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">10</td>
+                    {% endif %}
+                </tr>    
+                <tr>
+                    {% if 11 == random %}
+                    <td style="border: 1px solid black; background-color: green;">11</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">11</td>
+                    {% endif %}
+                    {% if 12 == random %}
+                    <td style="border: 1px solid black; background-color: green;">12</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">12</td>
+                    {% endif %}
+                    {% if 13 == random %}
+                    <td style="border: 1px solid black; background-color: green;">13</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">13</td>
+                    {% endif %}
+                    {% if 14 == random %}
+                    <td style="border: 1px solid black; background-color: green;">14</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">14</td>
+                    {% endif %}
+                    {% if 15 == random %}
+                    <td style="border: 1px solid black; background-color: green;">15</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">15</td>
+                    {% endif %}
+                    {% if 16 == random %}
+                    <td style="border: 1px solid black; background-color: green;">16</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">16</td>
+                    {% endif %}
+                    {% if 17 == random %}
+                    <td style="border: 1px solid black; background-color: green;">17</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">17</td>
+                    {% endif %}
+                    {% if 18 == random %}
+                    <td style="border: 1px solid black; background-color: green;">18</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">18</td>
+                    {% endif %}
+                    {% if 19 == random %}
+                    <td style="border: 1px solid black; background-color: green;">19</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">19</td>
+                    {% endif %}
+                    {% if 20 == random %}
+                    <td style="border: 1px solid black; background-color: green;">20</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">20</td>
+                    {% endif %}
+                </tr>  
+                <tr>  
+                    {% if 21 == random %}
+                    <td style="border: 1px solid black; background-color: green;">21</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">21</td>
+                    {% endif %}
+                    {% if 22 == random %}
+                    <td style="border: 1px solid black; background-color: green;">22</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">22</td>
+                    {% endif %}
+                    {% if 23 == random %}
+                    <td style="border: 1px solid black; background-color: green;">23</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">23</td>
+                    {% endif %}
+                    {% if 24 == random %}
+                    <td style="border: 1px solid black; background-color: green;">24</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">24</td>
+                    {% endif %}
+                    {% if 25 == random %}
+                    <td style="border: 1px solid black; background-color: green;">25</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">25</td>
+                    {% endif %}
+                    {% if 26 == random %}
+                    <td style="border: 1px solid black; background-color: green;">26</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">26</td>
+                    {% endif %}
+                    {% if 27 == random %}
+                    <td style="border: 1px solid black; background-color: green;">27</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">27</td>
+                    {% endif %}
+                    {% if 28 == random %}
+                    <td style="border: 1px solid black; background-color: green;">28</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">28</td>
+                    {% endif %}
+                    {% if 29 == random %}
+                    <td style="border: 1px solid black; background-color: green;">29</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">29</td>
+                    {% endif %}
+                    {% if 30 == random %}
+                    <td style="border: 1px solid black; background-color: green;">30</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">30</td>
+                    {% endif %}
+                </tr> 
+                <tr>   
+                    {% if 31 == random %}
+                    <td style="border: 1px solid black; background-color: green;">31</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">31</td>
+                    {% endif %}
+                    {% if 32 == random %}
+                    <td style="border: 1px solid black; background-color: green;">32</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">32</td>
+                    {% endif %}
+                    {% if 33 == random %}
+                    <td style="border: 1px solid black; background-color: green;">33</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">33</td>
+                    {% endif %}
+                    {% if 34 == random %}
+                    <td style="border: 1px solid black; background-color: green;">34</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">34</td>
+                    {% endif %}
+                    {% if 35 == random %}
+                    <td style="border: 1px solid black; background-color: green;">35</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">35</td>
+                    {% endif %}
+                    {% if 36 == random %}
+                    <td style="border: 1px solid black; background-color: green;">36</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">36</td>
+                    {% endif %}
+                    {% if 37 == random %}
+                    <td style="border: 1px solid black; background-color: green;">37</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">37</td>
+                    {% endif %}
+                    {% if 38 == random %}
+                    <td style="border: 1px solid black; background-color: green;">38</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">38</td>
+                    {% endif %}
+                    {% if 39 == random %}
+                    <td style="border: 1px solid black; background-color: green;">39</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">39</td>
+                    {% endif %}
+                    {% if 40 == random %}
+                    <td style="border: 1px solid black; background-color: green;">40</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">40</td>
+                    {% endif %}
+                </tr> 
+                <tr>   
+                    {% if 41 == random %}
+                    <td style="border: 1px solid black; background-color: green;">41</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">41</td>
+                    {% endif %}
+                    {% if 42 == random %}
+                    <td style="border: 1px solid black; background-color: green;">42</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">42</td>
+                    {% endif %}
+                    {% if 43 == random %}
+                    <td style="border: 1px solid black; background-color: green;">43</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">43</td>
+                    {% endif %}
+                    {% if 44 == random %}
+                    <td style="border: 1px solid black; background-color: green;">44</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">44</td>
+                    {% endif %}
+                    {% if 45 == random %}
+                    <td style="border: 1px solid black; background-color: green;">45</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">45</td>
+                    {% endif %}
+                    {% if 46 == random %}
+                    <td style="border: 1px solid black; background-color: green;">46</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">46</td>
+                    {% endif %}
+                    {% if 47 == random %}
+                    <td style="border: 1px solid black; background-color: green;">47</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">47</td>
+                    {% endif %}
+                    {% if 48 == random %}
+                    <td style="border: 1px solid black; background-color: green;">48</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">48</td>
+                    {% endif %}
+                    {% if 49 == random %}
+                    <td style="border: 1px solid black; background-color: green;">49</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">49</td>
+                    {% endif %}
+                    {% if 50 == random %}
+                    <td style="border: 1px solid black; background-color: green;">50</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">50</td>
+                    {% endif %}
+                </tr> 
+                <tr>   
+                    {% if 51 == random %}
+                    <td style="border: 1px solid black; background-color: green;">51</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">51</td>
+                    {% endif %}
+                    {% if 52 == random %}
+                    <td style="border: 1px solid black; background-color: green;">52</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">52</td>
+                    {% endif %}
+                    {% if 53 == random %}
+                    <td style="border: 1px solid black; background-color: green;">53</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">53</td>
+                    {% endif %}
+                    {% if 54 == random %}
+                    <td style="border: 1px solid black; background-color: green;">54</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">54</td>
+                    {% endif %}
+                    {% if 55 == random %}
+                    <td style="border: 1px solid black; background-color: green;">55</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">55</td>
+                    {% endif %}
+                    {% if 56 == random %}
+                    <td style="border: 1px solid black; background-color: green;">57</td>
+                    {% else %}
+                    <td style="border: 1px solid black;" >57</td>
+                    {% endif %}
+                    {% if 57 == random %}
+                    <td style="border: 1px solid black; background-color: green;">57</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">57</td>
+                    {% endif %}
+                    {% if 58 == random %}
+                    <td style="border: 1px solid black; background-color: green;">58</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">58</td>
+                    {% endif %}
+                    {% if 59 == random %}
+                    <td style="border: 1px solid black; background-color: green;">59</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">59</td>
+                    {% endif %}
+                    {% if 60 == random %}
+                    <td style="border: 1px solid black; background-color: green;">60</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">60</td>
+                    {% endif %}
+                </tr>  
+                <tr>  
+                    {% if 61 == random %}
+                    <td style="border: 1px solid black; background-color: green;">61</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">61</td>
+                    {% endif %}
+                    {% if 62 == random %}
+                    <td style="border: 1px solid black; background-color: green;">62</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">62</td>
+                    {% endif %}
+                    {% if 63 == random %}
+                    <td style="border: 1px solid black; background-color: green;">63</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">63</td>
+                    {% endif %}
+                    {% if 64 == random %}
+                    <td style="border: 1px solid black; background-color: green;">64</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">64</td>
+                    {% endif %}
+                    {% if 65 == random %}
+                    <td style="border: 1px solid black; background-color: green;">65</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">65</td>
+                    {% endif %}
+                    {% if 66 == random %}
+                    <td style="border: 1px solid black; background-color: green;" >67</td>
+                    {% else %}
+                    <td style="border: 1px solid black;" >67</td>
+                    {% endif %}
+                    {% if 67 == random %}
+                    <td style="border: 1px solid black; background-color: green;">67</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">67</td>
+                    {% endif %}
+                    {% if 68 == random %}
+                    <td style="border: 1px solid black; background-color: green;">68</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">68</td>
+                    {% endif %}
+                    {% if 69 == random %}
+                    <td style="border: 1px solid black; background-color: green;">69</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">69</td>
+                    {% endif %}
+                    {% if 70 == random %}
+                    <td style="border: 1px solid black; background-color: green;">70</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">70</td>
+                    {% endif %}
+                </tr> 
+                <tr>   
+                    {% if 71 == random %}
+                    <td style="border: 1px solid black; background-color: green;">71</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">71</td>
+                    {% endif %}
+                    {% if 72 == random %}
+                    <td style="border: 1px solid black; background-color: green;">72</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">72</td>
+                    {% endif %}
+                    {% if 73 == random %}
+                    <td style="border: 1px solid black; background-color: green;">73</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">73</td>
+                    {% endif %}
+                    {% if 74 == random %}
+                    <td style="border: 1px solid black; background-color: green;">74</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">74</td>
+                    {% endif %}
+                    {% if 75 == random %}
+                    <td style="border: 1px solid black; background-color: green;">75</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">75</td>
+                    {% endif %}
+                    {% if 76 == random %}
+                    <td style="border: 1px solid black; background-color: green;" >76</td>
+                    {% else %}
+                    <td style="border: 1px solid black;" >76</td>
+                    {% endif %}
+                    {% if 77 == random %}
+                    <td style="border: 1px solid black; background-color: green;">77</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">77</td>
+                    {% endif %}
+                    {% if 78 == random %}
+                    <td style="border: 1px solid black; background-color: green;">78</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">78</td>
+                    {% endif %}
+                    {% if 79 == random %}
+                    <td style="border: 1px solid black; background-color: green;">79</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">79</td>
+                    {% endif %}
+                    {% if 80 == random %}
+                    <td style="border: 1px solid black; background-color: green;">80</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">80</td>
+                    {% endif %}
+                </tr>  
+                <tr>  
+                    {% if 81 == random %}
+                    <td style="border: 1px solid black; background-color: green;">81</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">81</td>
+                    {% endif %}
+                    {% if 82 == random %}
+                    <td style="border: 1px solid black; background-color: green;">82</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">82</td>
+                    {% endif %}
+                    {% if 83 == random %}
+                    <td style="border: 1px solid black; background-color: green;">83</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">83</td>
+                    {% endif %}
+                    {% if 84 in recent_numbers %}
+                    <td style="border: 1px solid black; background-color: green;">84</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">84</td>
+                    {% endif %}
+                    {% if 85 == random %}
+                    <td style="border: 1px solid black; background-color: green;">85</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">85</td>
+                    {% endif %}
+                    {% if 86 == random %}
+                    <td style="border: 1px solid black; background-color: green;">86</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">86</td>
+                    {% endif %}
+                    {% if 87 == random %}
+                    <td style="border: 1px solid black; background-color: green;">87</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">87</td>
+                    {% endif %}
+                    {% if 88 == random %}
+                    <td style="border: 1px solid black; background-color: green;">88</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">88</td>
+                    {% endif %}
+                    {% if 89 == recent_numbers %}
+                    <td style="border: 1px solid black; background-color: green;">89</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">89</td>
+                    {% endif %}
+                    {% if 90 == recent_numbers %}
+                    <td style="border: 1px solid black; background-color: green;">90</td>
+                    {% else %}
+                    <td style="border: 1px solid black;">90</td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+        <div id = "nextNumber" style="font-size: 20pt;font-family: Courier New;">{{ recent_numbers }}</div>
+        <div class="col-md-4">
+            <a href="{% url 'home' %}" class="btn btn-secondary btn-block btn-lg">Next</a>
+        </div>
+
+        <input type = "button" onClick="genRandNo();" value="Next No">
+        <div id = "completedNumbers"></div>
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
+</html>
